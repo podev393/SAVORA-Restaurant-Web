@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAVORA | Fine Dining (Demo Website)</title>
+  <meta name="description" content="SAVORA is a fictional fine-dining restaurant website demonstration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <p class="demo-bar">Frontend demo: all dishes, prices, hours and contact details are fictional.</p>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="wrap bar">
+      <a class="logo" href="#home" aria-label="SAVORA, back to top"><b>SAVORA</b><small>FINE DINING
+          EXPERIENCE</small></a>
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#contact">Contact</a><a
+          href="#reservation">Reservation</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" id="cartOpen" type="button" aria-label="Open cart, 0 items">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"
+            aria-hidden="true">
+            <path d="M3 4h2l2.4 11h10l2-8H6.5" />
+            <circle cx="9" cy="19" r="1.4" />
+            <circle cx="17" cy="19" r="1.4" />
+          </svg>
+          <span class="count" id="cartCount">0</span>
+        </button>
+        <a class="btn btn-gold hide-sm" href="#reservation">Reserve a Table</a>
+        <button class="icon-btn menu-toggle" id="navToggle" type="button" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="nav">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AN EXCEPTIONAL DINING EXPERIENCE</p>
+          <h1>Experience the Art of <em>Fine Dining</em></h1>
+          <p class="lead">Discover thoughtfully crafted dishes, seasonal ingredients, and memorable moments around every
+            table.</p>
+          <div class="btns"><a class="btn btn-gold" href="#menu">View Our Menu</a><a class="btn btn-ghost"
+              href="#about">Discover Our Story</a></div>
+        </div>
+        <figure class="img-box hero-img" data-name="SAVORA">
+          <img src="assets/images/hero-Dish.jpg"
+            alt="Elegantly plated main course on a dark restaurant table" width="1000" height="750"
+            fetchpriority="high">
+          <figcaption class="stat"><b>20+</b> Years of Culinary Inspiration <small>(demo claim)</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="wrap center reveal">
+        <span class="divider"></span>
+        <h2>Seasonal ingredients, thoughtfully prepared.</h2>
+        <p>Every plate begins with what is fresh this week and ends with careful presentation. Our kitchen keeps the
+          menu focused so each dish gets full attention.</p>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section" id="menu">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="eyebrow">OUR MENU</p>
+          <h2>Our Signature Menu</h2>
+          <p>Explore a selection of dishes prepared with care and creativity.</p>
+          <p class="demo">Demo content: dishes and prices are fictional.</p>
+        </header>
+        <div class="tools">
+          <div class="chips" id="filters" role="group" aria-label="Menu categories">
+            <button class="chip active" type="button" data-cat="All" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-cat="Starters" aria-pressed="false">Starters</button>
+            <button class="chip" type="button" data-cat="Main Course" aria-pressed="false">Main Course</button>
+            <button class="chip" type="button" data-cat="Pizza" aria-pressed="false">Pizza</button>
+            <button class="chip" type="button" data-cat="Desserts" aria-pressed="false">Desserts</button>
+            <button class="chip" type="button" data-cat="Drinks" aria-pressed="false">Drinks</button>
+          </div>
+          <div class="find">
+            <input type="search" id="search" placeholder="Search dishes"
+              aria-label="Search dishes by name or description">
+            <select id="sort" aria-label="Sort dishes">
+              <option value="featured">Featured</option>
+              <option value="price">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid" id="menuGrid"></div>
+        <p class="empty" id="empty" hidden>No dishes match your search. Clear the search box or pick another category.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section alt" id="about">
+      <div class="wrap split">
+        <figure class="img-box" data-name="Dining room">
+          <img src="assets/images/dining-room.jpg"
+            alt="Warmly lit restaurant dining room with set tables" width="900" height="675" loading="lazy">
+        </figure>
+        <div class="reveal">
+          <p class="eyebrow">ABOUT US</p>
+          <h2>More Than a Meal. A Memorable Experience.</h2>
+          <p class="muted">SAVORA is an imaginary kitchen built around carefully selected ingredients, thoughtful
+            presentation and a comfortable room where guests can slow down. Our made-up team pays attention to the small
+            details, from how a plate arrives to how a table is welcomed.</p>
+          <ul class="feats">
+            <li><b>Fresh Ingredients</b><span>Seasonal produce, chosen with care.</span></li>
+            <li><b>Crafted with Care</b><span>Each plate is finished by hand.</span></li>
+            <li><b>Memorable Hospitality</b><span>Warm, attentive service at every visit.</span></li>
+          </ul>
+          <a class="btn btn-gold" href="#reservation">Reserve a Table</a>
+          <p class="demo">Sample brand messaging, not verified claims.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMBIENCE -->
+    <section class="section" id="ambience">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <h2>The SAVORA Experience</h2>
+        </header>
+        <div class="tiles">
+          <figure class="img-box tile" data-name="Elegant Dining"><img
+              src="assets/images/elegant-dining.jpg"
+              alt="Candlelit restaurant tables ready for dinner" width="700" height="933" loading="lazy">
+            <figcaption>Elegant Dining</figcaption>
+          </figure>
+          <figure class="img-box tile" data-name="Culinary Craft"><img
+              src="assets/images/culinary-craft.jpg"
+              alt="Chef plating a dish in a professional kitchen" width="700" height="933" loading="lazy">
+            <figcaption>Culinary Craft</figcaption>
+          </figure>
+          <figure class="img-box tile" data-name="Special Moments"><img
+              src="assets/images/special-moments.jpg"
+              alt="Guests raising drinks at a celebration" width="700" height="933" loading="lazy">
+            <figcaption>Special Moments</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section class="section alt" id="reservation">
+      <div class="wrap narrow">
+        <header class="sec-head reveal">
+          <p class="eyebrow">RESERVATION</p>
+          <h2>Reserve a Table</h2>
+          <p class="demo">Demonstration form: nothing is sent, stored or confirmed. No real booking is created.</p>
+        </header>
+        <form class="form" id="resForm" novalidate>
+          <label>Name<input name="name" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required
+              title="Enter a valid email address."></label>
+          <label>Phone<input type="tel" name="phone" autocomplete="tel" required pattern="[0-9+ \-]{7,20}"
+              title="Enter a phone number using digits, spaces, + or -."></label>
+          <label>Date<input type="date" name="date" id="resDate" required title="Choose today or a later date."></label>
+          <label>Time<input type="time" name="time" min="12:00" max="22:00" required
+              title="Choose a time between 12:00 PM and 10:00 PM."></label>
+          <label>Guests<input type="number" name="guests" min="1" max="12" step="1" value="2" required
+              title="Enter a whole number from 1 to 12."></label>
+          <label class="full">Special request (optional)<textarea name="note" rows="3"></textarea></label>
+          <button class="btn btn-gold full" type="submit">Request Demo Reservation</button>
+          <p class="status full" id="resStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <h2>Guest Impressions</h2>
+          <p class="demo">Fictional sample testimonials.</p>
+        </header>
+        <div class="quotes">
+          <blockquote>“A calm room and a plate that looked as good as it tasted.”<cite>Sample Guest 1</cite>
+          </blockquote>
+          <blockquote>“Attentive service without ever feeling rushed.”<cite>Sample Guest 2</cite></blockquote>
+          <blockquote>“We came for a birthday and stayed for dessert.”<cite>Sample Guest 3</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section alt" id="contact">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">VISIT US</p>
+          <h2>Contact &amp; Hours</h2>
+          <p class="demo">Placeholder details. Replace before publishing.</p>
+          <ul class="info">
+            <li><b>Address:</b> <span id="addr">Sample Location, Lahore, Pakistan</span></li>
+            <li><b>Phone:</b> +92 300 0000000 (DEMO)</li>
+            <li><b>Email:</b> hello@example.com (DEMO)</li>
+          </ul>
+          <div class="btns">
+            <button class="btn btn-ghost" type="button" id="copyAddr">Copy demo address</button>
+            <a class="btn btn-ghost" href="tel:+923000000000">Call (demo)</a>
+            <a class="btn btn-ghost" href="mailto:hello@example.com">Email (demo)</a>
+          </div>
+        </div>
+        <div>
+          <h3>Sample Opening Hours</h3>
+          <table class="hours">
+            <tr>
+              <td>Monday–Thursday</td>
+              <td>12:00 PM–10:00 PM</td>
+            </tr>
+            <tr>
+              <td>Friday–Sunday</td>
+              <td>12:00 PM–11:00 PM</td>
+            </tr>
+          </table>
+          <p class="muted small">Sample hours, not verified business hours.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div><a class="logo" href="#home"><b>SAVORA</b></a>
+          <p class="muted small">A fictional restaurant website for demonstration purposes.</p>
+        </div>
+        <nav aria-label="Footer">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reservation">Reservation</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3>Contact (demo)</h3>
+          <ul>
+            <li>Sample Location, Lahore</li>
+            <li>+92 300 0000000</li>
+            <li>hello@example.com</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <p class="muted small">Placeholders only. No official accounts exist.</p>
+        </div>
+      </div>
+      <p class="copy">© <span id="year">2026</span> SAVORA demo. Not a real business.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">↑</button>
+
+  <!-- CART DRAWER -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="cart" tabindex="-1" aria-label="Shopping cart" inert>
+    <div class="drawer-head">
+      <h2>Your Cart</h2><button class="icon-btn" id="cartClose" type="button" aria-label="Close cart">✕</button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="empty" id="cartEmpty">Your cart is empty. Add a dish from the menu.</p>
+    <div class="drawer-foot">
+      <div class="row"><span>Subtotal</span><b id="subtotal">PKR 0</b></div>
+      <button class="btn btn-gold" id="checkoutBtn" type="button">Proceed to Checkout (Demo)</button>
+      <button class="link" id="clearCart" type="button">Clear cart</button>
+    </div>
+  </aside>
+
+  <!-- DEMO CHECKOUT -->
+  <dialog id="checkout" aria-labelledby="coTitle">
+    <form id="coForm" novalidate>
+      <h2 id="coTitle">Demo Checkout</h2>
+      <p class="demo">Frontend demonstration only. No order is sent and no payment is taken. Do not enter card details.
+      </p>
+      <ul class="plain" id="coItems"></ul>
+      <div class="row"><span>Subtotal</span><b id="coTotal"></b></div>
+      <label>Name<input name="name" autocomplete="name" required></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel" required pattern="[0-9+ \-]{7,20}"
+          title="Enter a phone number using digits, spaces, + or -."></label>
+      <label>Delivery address<textarea name="address" rows="2" required></textarea></label>
+      <button class="btn btn-gold" type="submit">Place Demo Order</button>
+      <button class="link" type="button" data-close>Cancel</button>
+    </form>
+    <div id="coDone" hidden>
+      <h2>Demo order complete</h2>
+      <p class="muted">This was a local demonstration. No order was sent to any restaurant and no payment was collected.
+      </p>
+      <button class="btn btn-gold" type="button" data-close>Close</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
