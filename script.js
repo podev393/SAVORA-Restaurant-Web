@@ -42,15 +42,15 @@ async function copyText(text) {
 }
 
 /* ---------- 2. MENU DATA (edit names, prices and image ids here) ---------- */
-const U = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=700&q=70`;
+const U = id => `assets/images/${id}.jpg`;
 const DISHES = [
-  { id: 'burger', name: 'Artisan Gourmet Burger', cat: 'Main Course', price: 850, badge: 'Popular', img: '1568901346375-23c9450c58cd', alt: 'Gourmet burger with melted cheese and fresh toppings', desc: 'Juicy beef patty, aged cheddar and caramelised onions on a brioche bun.' },
-  { id: 'pizza', name: 'Margherita Pizza', cat: 'Pizza', price: 1100, badge: 'Popular', img: '1565299624946-b28f40a0ae38', alt: 'Margherita pizza topped with basil', desc: 'Stone-baked crust, tomato, fresh mozzarella and basil.' },
-  { id: 'pasta', name: 'Creamy Alfredo Pasta', cat: 'Main Course', price: 950, badge: '', img: '1621996346565-e3dbc646d9a9', alt: 'Bowl of creamy Alfredo pasta', desc: 'Fettuccine in a silky parmesan cream sauce with cracked pepper.' },
-  { id: 'chicken', name: 'Herb-Grilled Chicken', cat: 'Main Course', price: 1350, badge: "Chef's Pick", img: '1532550907401-a500c9a57435', alt: 'Herb-grilled chicken with roasted vegetables', desc: 'Marinated chicken breast, grilled and served with seasonal vegetables.' },
-  { id: 'cake', name: 'Chocolate Lava Cake', cat: 'Desserts', price: 550, badge: "Chef's Pick", img: '1624353365286-3f8d62daad51', alt: 'Chocolate lava cake with molten centre', desc: 'Warm dark chocolate cake with a molten centre and vanilla cream.' },
-  { id: 'cooler', name: 'Tropical Citrus Cooler', cat: 'Drinks', price: 350, badge: '', img: '1544145945-f90425340c7e', alt: 'Tall glass of tropical citrus drink with ice', desc: 'Orange, lime and pineapple over ice with fresh mint.' },
-  { id: 'bread', name: 'Garlic Herb Bread', cat: 'Starters', price: 450, badge: '', img: '1573140247632-f8fd74997d5c', alt: 'Sliced garlic bread with herbs', desc: 'Oven-warm bread brushed with garlic butter and parsley.' }
+  { id: 'burger', name: 'Burger', cat: 'Main Course', price: 850, badge: 'Popular', img: 'burger', alt: 'Gourmet burger with melted cheese and fresh toppings', desc: 'Stacked fresh, grilled to perfection — bite into pure deliciousness.' },
+  { id: 'pizza', name: 'Spicy Aloha', cat: 'Pizza', price: 1100, badge: 'Popular', img: 'pizza', alt: 'Margherita pizza topped with basil', desc: 'Freshly baked, loaded with flavor — every slice is a slice of heaven. ' },
+  { id: 'pasta', name: 'Creamy Tuscan Mushroom Pasta', cat: 'Main Course', price: 950, badge: '', img: 'pasta', alt: 'Bowl of creamy Alfredo pasta', desc: ' Pasta tossed in silky cream sauce with seared mushrooms, spinach & sun-dried tomatoes — pure Italian comfort.' },
+  { id: 'chicken', name: 'Grilled Chicken', cat: 'Main Course', price: 1350, badge: "Chef's Pick", img: 'chicken', alt: 'Herb-grilled chicken with roasted vegetables', desc: 'Marinated chicken breast, grilled and served with seasonal vegetables.' },
+  { id: 'cake', name: 'Lava Cake', cat: 'Desserts', price: 550, badge: "Chef's Pick", img: 'lava_cake', alt: 'Chocolate lava cake with molten centre', desc: 'Molten chocolate cake with a gooey, oozing center — pure chocolate bliss.' },
+  { id: 'cooler', name: 'Chai', cat: 'Drinks', price: 350, badge: '', img: 'chai', alt: 'Cup of Tea', desc: 'A warm, aromatic cup of chai — cozy and comforting.' },
+  { id: 'bread', name: 'Garlic Herb Bread', cat: 'Starters', price: 450, badge: '', img: 'bread', alt: 'Sliced garlic bread with herbs', desc: 'Oven-warm bread brushed with garlic butter and parsley.' }
 ];
 const byId = id => DISHES.find(d => d.id === id);
 
